@@ -1,0 +1,9 @@
+<div>
+    <panel>
+        <div ng-repeat="country in $ctrl.countries">
+            {{ country }} <qrcode data="http://localhost:3000/#!/whatever?country={{country}}" href="http://localhost:3000/#!/whatever?country={{country}}"></qrcode>
+        </div>
+    </panel>
+</div>
+
+

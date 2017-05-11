@@ -1,0 +1,10 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "func-names": ["error", "never"]
+  },
+  "globals": {
+    "angular": true,
+    "firebase": true
+  }
+}

@@ -1,0 +1,26 @@
+<nav>
+    <brand>Floaters</brand>
+    <login ng-click="mainNavController.login()" ng-hide="$root.user">
+        Log In
+    </login>
+    <user-info ng-show="$root.user">
+        {{$root.user.displayName}}
+    </user-info>
+    <ul>
+        <li>
+            <a ui-sref="home" ui-sref-active="active">Home</a>
+        </li>
+        <li>
+            <a ui-sref="whatever" ui-sref-active="active">Whatever</a>
+        </li>
+        <li>
+            <a ui-sref="home" ui-sref-active="active">Events</a>
+        </li>
+        <li>
+            <a ui-sref="home" ui-sref-active="active">Contacts</a>
+        </li>
+        <li>
+            <a ui-sref="floats" ui-sref-active="active">Floats</a>
+        </li>
+    </ul>
+</nav>

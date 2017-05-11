@@ -1,0 +1,71 @@
+@import '../../../assets/scss/layout.scss';
+
+main-nav{
+  nav{
+    @include block;
+    background: black;
+    color: white;
+
+    brand{
+      float: left;
+      font-size: 1.5em;
+      padding: 10px;
+    }
+
+    ul{
+      list-style: none;
+      float: right;
+      padding: 0;
+      margin: 0;
+
+      li{
+        display: inline-block;
+
+        a{
+          display: inline-block;
+          padding: 15px 15px;
+          color: white;
+          text-decoration: none;
+
+          &:hover{
+            border-top: 5px solid dodgerblue;
+            padding-top: 10px;
+            background: #222;
+          }
+        }
+      }
+    }
+
+    login, user-info{
+      padding: 15px 15px;
+      @include block;
+      float: right;
+    }
+
+    login{
+      cursor: pointer;
+      &:hover{
+        background: #222;
+      }
+    }
+
+    user-info{
+
+    }
+  }
+}
+
+
+@media (max-width: 625px){
+  main-nav{
+    ul{
+      li{
+        display: auto !important;
+
+        a{
+          display: auto !important;
+        }
+      }
+    }
+  }
+}

@@ -1,9 +1,37 @@
-<div>
+<!--<div>
     <panel>
         <div ng-repeat="country in $ctrl.countries">
-            {{ country }} <qrcode data="http://localhost:3000/#!/whatever?country={{country}}" href="http://localhost:3000/#!/whatever?country={{country}}"></qrcode>
+            {{ country }}  
+            
+            
         </div>
     </panel>
+</div>-->
+
+<p class="title">Countries</p>
+
+<div class="hide-tiny">
+<div class="column-group half-top-space">
+    <div class="all-50 align-center" ng-repeat="country in $ctrl.countries">
+        <a class="ink-button" ng-click="$ctrl.showCode=true; $ctrl.forCountry=country">{{ country }}</a>
+    </div>
+</div>
 </div>
 
+<div ng-show="$ctrl.showCode">
+    <qrcode data="http://localhost:3000/#!/whatever?country={{$ctrl.forCountry}}" href="http://localhost:3000/#!/whatever?country={{$ctrl.forCountry}}"></qrcode>
+</div>
 
+<div class="ink-grid">
+  <div class="column-group horizontal-gutters">
+    <div class="all-33 order-3">
+      column 1
+    </div>
+    <div class="all-33 order-1">
+      column 2
+    </div>
+    <div class="all-33 order-2">
+      column 3
+    </div>
+  </div>
+</div>

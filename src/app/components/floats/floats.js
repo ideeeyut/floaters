@@ -22,7 +22,7 @@
       window.navigator.geolocation.getCurrentPosition(success, error);
   }
 
-  angular.module('Firestarter')
+  angular.module('Floaters')
     .component('floats', {
       templateUrl: 'views/floats.html',
       controller: ['db', 'auth', 'authProvider', FloatsController],

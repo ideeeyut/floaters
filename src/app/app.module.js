@@ -1,3 +1,3 @@
 (function (angular) {
-  angular.module('Firestarter', ['ui.router', 'monospaced.qrcode']);
+  angular.module('Floaters', ['ui.router', 'monospaced.qrcode']);
 }(angular));

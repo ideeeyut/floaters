@@ -14,3 +14,5 @@ Firebase references
 - https://www.firebase.com/docs/web/libraries/angular/api.html
 
 https://github.com/monospaced/angular-qrcode
+
+http://ink.sapo.pt/ui-elements/forms/

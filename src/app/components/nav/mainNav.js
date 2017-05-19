@@ -7,7 +7,7 @@
 
     this.login = login;
   }
-  angular.module('Firestarter')
+  angular.module('Floaters')
     .component('mainNav', {
       templateUrl: 'views/mainNav.html',
       controller: ['auth', 'authProvider', MainNavController],

@@ -1,5 +1,5 @@
 (function (angular) {
-  angular.module('Firestarter')
+  angular.module('Floaters')
     .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
       $stateProvider.state('home', {
         url: '/',

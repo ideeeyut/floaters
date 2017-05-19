@@ -9,7 +9,7 @@
       };
     });
   }
-  angular.module('Firestarter') 
+  angular.module('Floaters') 
     .component('whatever', {
       templateUrl: 'views/whatever.html',
       controller: ['geoLocationService', WhateverController],

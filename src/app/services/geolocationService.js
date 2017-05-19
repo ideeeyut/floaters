@@ -1,5 +1,5 @@
  (function (angular) {
-   angular.module('Firestarter')
+   angular.module('Floaters')
      .service('geoLocationService', ['$q', '$window', function ($q, $window) {
          this.getCurrentPosition = function() {
             var deferred = $q.defer();

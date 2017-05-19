@@ -2,7 +2,7 @@
   function HomeController() {
 
   }
-  angular.module('Firestarter')
+  angular.module('Floaters')
     .component('home', {
       templateUrl: 'views/home.html',
       controller: ['db', 'auth', 'authProvider', HomeController],

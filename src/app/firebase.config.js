@@ -7,7 +7,7 @@
     messagingSenderId: '37797816176',
   });
 
-  angular.module('Firestarter')
+  angular.module('Floaters')
     .constant('db', firebaseConn.database())
     .constant('auth', firebase.auth())
     .constant('authProvider', new firebase.auth.GoogleAuthProvider())

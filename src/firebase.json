@@ -1,0 +1,6 @@
+{
+    "floats": {
+        ".read": true,
+        ".write": "auth != null"
+    }
+}

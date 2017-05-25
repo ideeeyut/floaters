@@ -3,23 +3,17 @@
     <login ng-click="mainNavController.login()" ng-hide="$root.user">
         Log In
     </login>
-    <user-info ng-show="$root.user">
+    <user-info ng-show="$root.user" ng-click="mainNavController.logout()">
         {{$root.user.displayName}}
     </user-info>
     <ul>
         <li>
-            <a ui-sref="home" ui-sref-active="active">Home</a>
+            <a ui-sref="parade" ui-sref-active="active">Parade</a>
         </li>
         <li>
-            <a ui-sref="whatever" ui-sref-active="active">Whatever</a>
+            <a ui-sref="whatever" ui-sref-active="active">Where Am I?</a>
         </li>
-        <li>
-            <a ui-sref="home" ui-sref-active="active">Events</a>
-        </li>
-        <li>
-            <a ui-sref="home" ui-sref-active="active">Contacts</a>
-        </li>
-        <li>
+        <li ng-show="$root.user">
             <a ui-sref="floats" ui-sref-active="active">Floats</a>
         </li>
     </ul>

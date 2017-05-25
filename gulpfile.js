@@ -19,7 +19,7 @@ gulp.task('js', (cb) => {
     babel({ presets: ['es2015'] }),
     concat('app.min.js'),
     sourceMaps.init(),
-    uglify(),
+    //uglify(),
     sourceMaps.write(),
     gulp.dest(folders.dist),
   ], cb);
@@ -56,7 +56,10 @@ gulp.task('views', (cb) => {
 
 gulp.task('css', (cb) => {
   pump([
-    gulp.src(`${folders.src}/**/*.scss`),
+    gulp.src([
+      `${folders.src}/**/*.scss`,
+      'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css',
+    ]),
     sourceMaps.init(),
     sass(),
     sourceMaps.write(),

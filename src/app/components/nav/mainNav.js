@@ -6,6 +6,10 @@
     }
 
     this.login = login;
+
+    this.logout = function () {
+      auth.signOut();
+    };
   }
   angular.module('Floaters')
     .component('mainNav', {
@@ -14,4 +18,3 @@
       controllerAs: 'mainNavController',
     });
 }());
-

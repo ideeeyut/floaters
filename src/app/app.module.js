@@ -1,3 +1,3 @@
 (function (angular) {
-  angular.module('Floaters', ['ui.router', 'monospaced.qrcode']);
+  angular.module('Floaters', ['firebase', 'ui.router', 'ui.bootstrap', 'monospaced.qrcode']);
 }(angular));

@@ -1,37 +1,53 @@
-<!--<div>
-    <panel>
-        <div ng-repeat="country in $ctrl.countries">
-            {{ country }}  
-            
-            
-        </div>
-    </panel>
-</div>-->
-
 <p class="title">Countries</p>
 
-<div class="hide-tiny">
-<div class="column-group half-top-space">
-    <div class="all-50 align-center" ng-repeat="country in $ctrl.countries">
-        <a class="ink-button" ng-click="$ctrl.showCode=true; $ctrl.forCountry=country">{{ country }}</a>
+<div class="container-fluid">
+    <div class="row" ng-repeat="float in $ctrl.floats" ng-click="$ctrl.openEditFloat(float)">
+        <div class="col-md-4">
+            <h3>{{ float.name }}</h3>
+        </div>
+        <div class="col-md-6">{{ float.description }}</div>
+        <div class="col-md-2">
+            <i class="fa fa-pencil-square-o fa-2x" ng-click="$ctrl.openEditFloat(float)"></i>
+            <i class="fa fa-trash-o fa-2x" ng-click="$ctrl.remove(float)"></i>
+        </div>
     </div>
-</div>
 </div>
 
-<div ng-show="$ctrl.showCode">
-    <qrcode data="http://localhost:3000/#!/whatever?country={{$ctrl.forCountry}}" href="http://localhost:3000/#!/whatever?country={{$ctrl.forCountry}}"></qrcode>
+
+<button ng-click="$ctrl.openEditFloat($ctrl.newFloat)">Add Float</button>
+
+<div class="pure-g">
+    <div ng-show="$ctrl.showCode" class="pure-u-1 align-center">
+        <qrcode class="" data="http://localhost:3000/#!/whatever?float={{$ctrl.forFloat}}" href="http://localhost:3000/#!/whatever?float={{$ctrl.forFloat}}"></qrcode>
+    </div>
 </div>
 
-<div class="ink-grid">
-  <div class="column-group horizontal-gutters">
-    <div class="all-33 order-3">
-      column 1
+<script type="text/ng-template" id="addFloat.html">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Add a float</h3>
     </div>
-    <div class="all-33 order-1">
-      column 2
+    <div class="modal-body" id="modal-body">
+        <div class="form-group">
+            <label for="floatName">Name</label>
+            <input type="text" class="form-control" id="floatName" ng-model="$ctrl.float.name" placeholder="My Marching Band"></input>
+        </div>
+        <div class="form-group">
+            <label for="floatInfo">Description</label>
+            <textarea type="text" rows="3" class="form-control" id="floatDescription" ng-model="$ctrl.float.description" placeholder="My Marching Band"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="floatImage">Image(s)</label>
+            <input type="text" class="form-control" id="floatImage" ng-model="$ctrl.float.imageUrl" placeholder="Image Url"></input>
+        </div>
+        <div class="form-group">
+            <label for="latitude">Latitude:</label>
+            <input type="text" class="form-control" id="latitude" ng-model="$ctrl.float.position.lat" placeholder="Latitude"></input>
+            <label for="longitude">Longitude:</label>
+            <input type="text" class="form-control" id="longitude" ng-model="$ctrl.float.position.long" placeholder="Longitude"></input>
+        </div>
     </div>
-    <div class="all-33 order-2">
-      column 3
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
     </div>
-  </div>
-</div>
+</script>
